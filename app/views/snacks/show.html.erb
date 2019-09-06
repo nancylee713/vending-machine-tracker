@@ -5,7 +5,11 @@
 <ul>
   <% @snack.machines.each do |machine| %>
     <section id="machine-id-<%= machine.id %>">
-      <li><%= machine.location %> (<%= machine.count_snacks %> kinds of snacks, average price of <%= number_to_currency(machine.snacks.average_price) %>)</li>
+      <li>
+        <%= machine.location %>
+        (<%= machine.count_snacks %> kinds of snacks,
+        average price of <%= number_to_currency(machine.snacks.average_price) %>)
+      </li>
     </section>
   <% end %>
 </ul>
