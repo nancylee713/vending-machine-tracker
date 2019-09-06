@@ -5,3 +5,5 @@
     <li><%= snack.name %>: <%= snack.price %></li>
   </section>
 <% end %>
+
+<h3>Average Price for Snacks: <%= number_to_currency(@machine.snacks.average_price.round(2)) %></h3>
